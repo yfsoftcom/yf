@@ -1,0 +1,25 @@
+<div class="row-fluid login-wrapper">
+    <a href="index.html">
+        <img class="logo" src="img/logo-white.png" />
+    </a>
+
+    <div class="span4 box">
+        <form ng-submit="doLogin(user)">
+            <div class="content-wrap">
+                <h6>云帆办公协同系统</h6>
+                <input class="span12" type="text" placeholder="请输入邮箱" ng-model="user.email" />
+                <input class="span12" type="password" placeholder="请输入密码" ng-model="user.pass" />
+                <a ng-href="#/fogotPass" class="forgot">忘记密码?</a>
+                <div class="remember">
+                    <input id="remember-me" type="checkbox" ng-model="remember"/>
+                    <label for="remember-me">记住我</label>
+                </div>
+                <button type="submit" class="btn-glow primary login">登录</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="span4 no-account">
+        <a ng-href="#/signup">注册用户</a>
+    </div>
+</div>

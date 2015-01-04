@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="login-bg" >
+<head>
+    <title>YF PlatFrom</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.css" />
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/compiled/signin.css" type="text/css" media="screen" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+    <!-- scripts -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+
+    <script src="js/app/yf.js"></script>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui/angular-ui-router.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/controllers.js"></script>
+
+    <body  ng-app="app" class="">
+        <div ui-view="navbar-view"></div>
+        <div ui-view="sidebar-nav-view"></div>
+        <div ui-view="content-view"></div>
+    </body>
+</html>
