@@ -1,11 +1,11 @@
 $(function () {
 
-  // navbar notification popups
+  //// navbar notification popups
   $(".notification-dropdown").each(function (index, el) {
     var $el = $(el);
     var $dialog = $el.find(".pop-dialog");
     var $trigger = $el.find(".trigger");
-    
+
     $dialog.click(function (e) {
         e.stopPropagation()
     });
@@ -22,7 +22,7 @@ $(function () {
     $trigger.click(function (e) {
       e.preventDefault();
       e.stopPropagation();
-      
+
       // hide all other pop-dialogs
       $(".notification-dropdown .pop-dialog").removeClass("is-visible");
       $(".notification-dropdown .trigger").removeClass("active")
@@ -34,28 +34,6 @@ $(function () {
         $(this).removeClass("active");
       }
     });
-  });
-
-
-  // skin changer
-  $(".skins-nav .skin").click(function (e) {
-    e.preventDefault();
-    if ($(this).hasClass("selected")) {
-      return;
-    }
-    $(".skins-nav .skin").removeClass("selected");
-    $(this).addClass("selected");
-    
-    if (!$("#skin-file").length) {
-      $("head").append('<link rel="stylesheet" type="text/css" id="skin-file" href="">');
-    }
-    var $skin = $("#skin-file");
-    if ($(this).attr("data-file")) {
-      $skin.attr("href", $(this).data("file"));
-    } else {
-      $skin.attr("href", "");
-    }
-
   });
 
 

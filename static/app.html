@@ -10,36 +10,47 @@
     <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
     <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
 
+    <!-- libraries -->
+    <link href="css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+
     <!-- global styles -->
     <link rel="stylesheet" type="text/css" href="css/layout.css" />
     <link rel="stylesheet" type="text/css" href="css/elements.css" />
     <link rel="stylesheet" type="text/css" href="css/icons.css" />
 
-    <!-- libraries -->
-    <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.css" />
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/compiled/index.css" type="text/css" media="screen" />
 
     <!-- this page specific styles -->
     <link rel="stylesheet" href="css/compiled/signin.css" type="text/css" media="screen" />
 
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/compiled/form-showcase.css" type="text/css" media="screen" />
+
+
+    <link rel="stylesheet" href="css/compiled/personal-info.css" type="text/css" media="screen" />
+
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
-    <!-- scripts -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/theme.js"></script>
-
     <script src="js/app/yf.js"></script>
-
-    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular.1.3.9/angular.min.js"></script>
     <script src="lib/angular-ui/angular-ui-router.min.js"></script>
+    <script src="lib/angular.1.3.9/angular-animate.min.js"></script>
 
     <!-- your app's js -->
     <script src="js/app/app.js"></script>
     <script src="js/app/controllers.js"></script>
 
     <body  ng-app="app" class="">
-        <div ui-view="navbar-view"></div>
-        <div ui-view="sidebar-nav-view"></div>
-        <div ui-view="content-view"></div>
+        <div ui-view></div>
     </body>
+    <!-- scripts -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="js/theme.js"></script>
+
 </html>
