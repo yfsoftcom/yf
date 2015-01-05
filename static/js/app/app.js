@@ -11,60 +11,69 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('yf',{
             url:'/yf',
             controller:'AppCtrl',
-            templateUrl:'views/root.html'
+            //templateUrl:'views/root.html'
+            template:'<div ui-view="navbar-view"></div><div ui-view="container-view"></div>'
         })
-        //.state('yf.aa', {
-        //    url:'/aa',
-        //    views:{
-        //        'navbar-view':{
-        //            templateUrl:'views/navbar.html',
-        //            controller:'NavbarCtrl'
-        //        },
-        //        'container-view':{
-        //            templateUrl:'views/signin.html',
-        //            controller:'UserCtrl'
-        //        }
-        //    }
-        //})
-        //.state('yf.signin', {
-        //    url:'/signin',
-        //    views:{
-        //        'container-view':{
-        //            templateUrl:'views/signin.html',
-        //            controller:'UserCtrl'
-        //        }
-        //    }
-        //})
+        .state('yf.view', {
+            url:'/view',
+            views:{
+                'navbar-view':{
+                    templateUrl:'views/navbar.html',
+                    controller:'NavbarCtrl'
+                },
+                'container-view':{
+                    template:'<div ui-view="sidebar-view"></div><div ui-view="content-view"></div>'
+                }
+            }
+        })
+        .state('yf.signin', {
+            url:'/signin',
+            views:{
+                'container-view':{
+                    templateUrl:'views/signin.html',
+                    controller:'UserCtrl'
+                }
+            }
+        })
 
-        //.state('yf.v.page',{
-        //    url:'/page',
-        //    views:{
-        //        'sidebar-view':{
-        //            templateUrl:'views/sidebar.html'
-        //        },
-        //        'content-view':{
-        //            template:'<div ui-view></div>'
-        //        }
-        //    }
-        //})
-        //.state('yf.v.page.main', {
-        //    url:'/main',
-        //    templateUrl:'views/main.html'
-        //
-        //})
-        //.state('yf.v.personal', {
-        //    url:'/personal',
-        //    views:{
-        //        'content-view':{
-        //            templateUrl:'views/personal-info.html'
-        //        }
-        //    }
-        //
-        //
-        //})
+        .state('yf.view.page',{
+            url:'/page',
+            views:{
+                'sidebar-view':{
+                    templateUrl:'views/sidebar.html',
+                    controller:'SidebarCtrl'
+                },
+                'content-view':{
+                    template:'<div ui-view></div>'
+                }
+            }
+        })
+        .state('yf.view.page.desktop', {
+            cached:true,
+            url:'/desktop',
+            templateUrl:'views/desktop.html',
+            controller:'DesktopCtrl'
+
+        })
+        .state('yf.view.page.test', {
+
+            url:'/test',
+            templateUrl:'views/test.html'
+
+        })
+        .state('yf.view.personal', {
+            url:'/personal',
+            views:{
+                'content-view':{
+                    templateUrl:'views/personal-info.html'
+                }
+            }
+
+
+        })
 
       ;
 
-      $urlRouterProvider.otherwise('/yf');
+      $urlRouterProvider.otherwise('/yf/signin');
 });
 
