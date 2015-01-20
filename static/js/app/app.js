@@ -12,7 +12,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url:'/yf',
             controller:'AppCtrl',
             //templateUrl:'views/root.html'
-            template:'<div ui-view="navbar-view"></div><div ui-view="container-view"></div>'
+            template:'<div ui-view="navbar-view"></div><div class="full-screen" ui-view="container-view"></div>'
         })
         .state('yf.view', {
             url:'/view',
@@ -53,6 +53,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url:'/desktop',
             templateUrl:'views/desktop.html',
             controller:'DesktopCtrl'
+
+        })
+        .state('yf.view.page.document', {
+            cached:true,
+            url:'/document',
+            templateUrl:'views/document.html',
+            controller:'DocumentCtrl'
 
         })
         .state('yf.view.page.test', {

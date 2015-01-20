@@ -1,11 +1,13 @@
 app.controller('AppCtrl', ['$scope','$state',
   function($scope,$state) {
       console.log('Hello world! from AppCtrl');
+
 }]);
 
 app.controller('UserCtrl', ['$scope','$state',
     function($scope,$state) {
         console.log('Hello world! from UserCtrl');
+
 
         $scope.doLogin = function(user){
             console.log(user);
@@ -131,5 +133,14 @@ app.controller('NavbarCtrl', ['$scope','$state',
             alert('signOut');
             $state.go('yf.signin');
         }
+
+    }]);
+
+
+
+app.controller('DocumentCtrl', ['$scope','$state',
+    function($scope,$state) {
+        console.log('Hello world! from DocumentCtrl');
+
 
     }]);
